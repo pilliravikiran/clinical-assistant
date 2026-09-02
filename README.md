@@ -1,3 +1,17 @@
+---
+title: Clinical Assistant
+emoji: 🏥
+colorFrom: blue
+colorTo: indigo
+sdk: streamlit
+app_file: streamlit_app.py
+pinned: false
+license: mit
+---
+
+<!-- The block above is read by Hugging Face Spaces to configure the deployment.
+     It is harmless on GitHub. Do not delete it if you deploy on HF Spaces. -->
+
 # Tenet Clinical AI - Grounded Clinical Knowledge Assistant (RAG)
 
 An internal **Retrieval-Augmented Generation (RAG)** assistant that lets clinicians
