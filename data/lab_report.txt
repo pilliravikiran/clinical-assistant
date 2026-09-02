@@ -1,0 +1,12 @@
+Document Type: Laboratory Report
+Document ID: LR-001
+Date: 2025-04-10
+
+Patient: Robert Test (fictional)
+
+Results:
+Fasting Glucose: 138 (High).
+Total Cholesterol: 220 (Borderline high).
+
+Interpretation:
+High glucose and cholesterol. Recommend diet changes and re-testing.

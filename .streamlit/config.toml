@@ -1,0 +1,5 @@
+# Streamlit configuration.
+[browser]
+# Turn OFF Streamlit's anonymous usage telemetry (the calls to
+# webhooks.fivetran.com you saw). No usage data is sent after this.
+gatherUsageStats = false

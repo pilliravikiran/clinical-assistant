@@ -1,0 +1,38 @@
+# GitHub Actions CI - runs automatically on every push / pull request.
+# It installs dependencies and runs the test suite, so broken code is caught
+# before it merges.
+
+name: CI
+
+# When to run: on pushes and pull requests to any branch.
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest        # GitHub gives us a fresh Linux machine
+    steps:
+      # 1. Get the code onto the runner.
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Install Python.
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # 3. Install CPU-only PyTorch (smaller/faster than the CUDA build).
+      - name: Install PyTorch (CPU)
+        run: pip install torch --index-url https://download.pytorch.org/whl/cpu
+
+      # 4. Install the rest of the dependencies.
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # 5. Lint (style/errors). Non-blocking so it informs but doesn't fail CI.
+      - name: Lint with ruff
+        run: pip install ruff && ruff check app || true
+
+      # 6. Run the test suite. If tests fail, the whole workflow fails (red X).
+      - name: Run tests
+        run: pytest -q

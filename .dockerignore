@@ -1,0 +1,15 @@
+# Keep these OUT of the Docker image (smaller image + no secrets).
+.venv/
+__pycache__/
+*.pyc
+.env                # secrets - pass via --env-file at run time instead
+.git/
+.vscode/
+mlruns/
+.pytest_cache/
+notebooks/
+tests/
+docs/
+scripts/
+data/processed/     # generated docstore / local files
+*.md

@@ -1,0 +1,30 @@
+# Files Git should IGNORE (never upload). This protects our secrets.
+.env
+__pycache__/
+.venv/
+*.pyc
+
+# MLflow experiment data (generated)
+mlruns/
+
+# Test / tool caches
+.pytest_cache/
+
+# Generated local vector store / docstore (if saved to disk)
+data/processed/*.json
+data/processed/*.db
+
+# Exported corporate/local CA certs (machine-specific, regenerate per-machine)
+certs/
+*.pem
+*.key
+*.crt
+
+# Secrets - never commit any .env variant except the safe template
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/*.log

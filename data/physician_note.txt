@@ -1,0 +1,12 @@
+Document Type: Physician Note
+Document ID: PN-001
+Date: 2025-03-14
+
+Patient: John Sample (fictional)
+Complaint: Elevated blood pressure and morning headaches.
+
+Assessment:
+The patient presents with hypertension. Blood pressure was 150/95.
+
+Plan:
+Start blood pressure medication. Reduce salt. Follow up in four weeks.

@@ -1,0 +1,11 @@
+Document Type: Discharge Summary
+Document ID: DS-001
+Date: 2025-04-02
+
+Patient: Mary Example (fictional)
+Reason for Admission: Pneumonia.
+
+Follow-up Care Recommended:
+Finish the full 7-day course of antibiotics at home.
+See your primary care doctor in one week.
+Return to the emergency room if fever comes back.
